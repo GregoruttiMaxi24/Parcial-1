@@ -1,0 +1,161 @@
+:root {
+  --bg: #0f1115;
+  --surface: #171a21;
+  --line: #262b35;
+  --ink: #e7e9ee;
+  --ink-soft: #9aa1ad;
+  --accent: #22d3ee;
+  --get: #34d399;
+  --post: #22d3ee;
+  --put: #fbbf24;
+  --delete: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.55;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero {
+  background: linear-gradient(160deg, #111827 0%, #0b1220 100%);
+  border-bottom: 1px solid var(--line);
+  padding: 56px 0 40px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(34, 211, 238, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(34, 211, 238, 0.35);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 12px;
+}
+
+.hero p {
+  color: var(--ink-soft);
+  max-width: 60ch;
+  margin: 0;
+}
+
+main {
+  padding: 40px 24px 60px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card > p {
+  color: var(--ink-soft);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+th {
+  color: var(--ink-soft);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+td code {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+.metodo {
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.metodo.get {
+  color: var(--get);
+}
+.metodo.post {
+  color: var(--post);
+}
+.metodo.put {
+  color: var(--put);
+}
+.metodo.delete {
+  color: var(--delete);
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0 40px;
+  color: var(--ink-soft);
+}
+
+.footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 28px;
+  font-size: 0.9rem;
+}
+
+.footer strong {
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  table {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Componentes PC — Parcial 1 Aplicaciones Híbridas</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <span class="badge">API RESTful</span>
+        <h1>API de Componentes de PC y Periféricos</h1>
+        <p>
+          Backend hecho con Node.js, Express y MongoDB (Mongoose) para una
+          tienda de componentes de computadora y periféricos. Parcial 1 de
+          Aplicaciones Híbridas.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Categorías</h2>
+        <p>CRUD de categorías de productos (procesadores, placas de video, periféricos, etc.).</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Endpoint</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="metodo get">GET</td>
+              <td><a href="/api/categorias">/api/categorias</a></td>
+              <td>Lista todas las categorías. Filtros: <code>?activa=true</code>, búsqueda <code>?buscar=texto</code></td>
+            </tr>
+            <tr>
+              <td class="metodo get">GET</td>
+              <td><code>/api/categorias/:id</code></td>
+              <td>Obtiene una categoría por su id</td>
+            </tr>
+            <tr>
+              <td class="metodo post">POST</td>
+              <td><code>/api/categorias</code></td>
+              <td>Crea una categoría (body: nombre, descripcion, activa)</td>
+            </tr>
+            <tr>
+              <td class="metodo put">PUT</td>
+              <td><code>/api/categorias/:id</code></td>
+              <td>Actualiza una categoría existente</td>
+            </tr>
+            <tr>
+              <td class="metodo delete">DELETE</td>
+              <td><code>/api/categorias/:id</code></td>
+              <td>Elimina una categoría</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Productos</h2>
+        <p>CRUD de productos, con filtros combinables y búsqueda por nombre.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Endpoint</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="metodo get">GET</td>
+              <td><a href="/api/productos">/api/productos</a></td>
+              <td>
+                Lista todos los productos. Filtros:
+                <code>?categoria=</code>, <code>?marca=</code>,
+                <code>?destacado=true</code>, <code>?enStock=true</code>,
+                <code>?precioMin=</code>, <code>?precioMax=</code>,
+                búsqueda <code>?buscar=texto</code>
+              </td>
+            </tr>
+            <tr>
+              <td class="metodo get">GET</td>
+              <td><code>/api/productos/:id</code></td>
+              <td>Obtiene un producto por su id</td>
+            </tr>
+            <tr>
+              <td class="metodo post">POST</td>
+              <td><code>/api/productos</code></td>
+              <td>Crea un producto (body: nombre, precio, stock, marca, categoria, imagen, destacado)</td>
+            </tr>
+            <tr>
+              <td class="metodo put">PUT</td>
+              <td><code>/api/productos/:id</code></td>
+              <td>Actualiza un producto existente</td>
+            </tr>
+            <tr>
+              <td class="metodo delete">DELETE</td>
+              <td><code>/api/productos/:id</code></td>
+              <td>Elimina un producto</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="card">
+        <h2>Usuarios</h2>
+        <p>Registro, login y administración de usuarios (no cuenta como una de las rutas principales del parcial).</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Método</th>
+              <th>Endpoint</th>
+              <th>Descripción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="metodo post">POST</td>
+              <td><code>/api/usuarios/registro</code></td>
+              <td>Crea un usuario (body: nombre, email, password, rol)</td>
+            </tr>
+            <tr>
+              <td class="metodo post">POST</td>
+              <td><code>/api/usuarios/login</code></td>
+              <td>Inicia sesión (body: email, password)</td>
+            </tr>
+            <tr>
+              <td class="metodo get">GET</td>
+              <td><a href="/api/usuarios">/api/usuarios</a></td>
+              <td>Lista usuarios. Filtros: <code>?rol=</code>, búsqueda <code>?buscar=texto</code></td>
+            </tr>
+            <tr>
+              <td class="metodo get">GET</td>
+              <td><code>/api/usuarios/:id</code></td>
+              <td>Obtiene un usuario por su id</td>
+            </tr>
+            <tr>
+              <td class="metodo put">PUT</td>
+              <td><code>/api/usuarios/:id</code></td>
+              <td>Actualiza un usuario existente</td>
+            </tr>
+            <tr>
+              <td class="metodo delete">DELETE</td>
+              <td><code>/api/usuarios/:id</code></td>
+              <td>Elimina un usuario</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <ul>
+          <li><strong>Nombre y Apellido:</strong> Alan Ortiz - Maximo Gregorutti</li>
+          <li><strong>Materia:</strong> Aplicaciones Híbridas</li>
+          <li><strong>Docente:</strong> Jonathan Emanuel Cruz</li>
+          <li><strong>Comisión:</strong> DWN4AV</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
