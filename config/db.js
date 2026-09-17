@@ -7,7 +7,7 @@ export async function conectarDB() {
 
     if (!uri) {
       throw new Error(
-        'Falta la variable de entorno MONGO_URI. Revisa tu archivo .env (podes copiar .env.example).'
+        'Falta la variable de entorno MONGO_URI.'
       )
     }
 
